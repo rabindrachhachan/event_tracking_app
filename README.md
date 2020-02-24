@@ -19,7 +19,7 @@ The below section illustrates the installation on mac OS
 ### iOS Development
 - nodejs 8.11
 - react-native-cli
-- Android Studio
+- Xcode
 
 ## Installation
 
