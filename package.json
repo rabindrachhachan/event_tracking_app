@@ -8,7 +8,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "lodash": "4.17.10",
+    "lodash": "4.17.13",
     "react": "16.8.6",
     "react-native": "0.60.5",
     "react-native-snackbar": "^0.4.4",
