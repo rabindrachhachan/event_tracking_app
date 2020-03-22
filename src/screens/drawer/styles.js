@@ -7,9 +7,6 @@ const DEVICE_WIDTH = Dimensions.get('window').width;
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingTop:20,
-        alignItems: 'center',
-        justifyContent: 'center'
     },
     eventItem: {
         marginTop: 2,
@@ -43,8 +40,7 @@ const styles = StyleSheet.create({
         fontSize: 16,
         lineHeight: 18,
         fontWeight: '400',
-        alignSelf: 'flex-start',
-        paddingStart: 10,
+        alignSelf: 'center',
     },
 
     catalogWrapper: {
@@ -52,19 +48,19 @@ const styles = StyleSheet.create({
         alignItems: 'flex-start',
         justifyContent: 'center',
         flexDirection: 'row',
-        marginBottom: 80,
+        marginBottom: 50,
         backgroundColor: 'transparent',
+        flex:1
     },
 
     header: {
-        width: DEVICE_WIDTH,
-        height: 50,
+        height:50,
         backgroundColor: '#E1FBFF',
         borderBottomWidth: 1,
         borderColor: 'rgb(169,171,173)',
         paddingLeft: 10,
-        marginTop:50,
         alignItems:'center',
+        justifyContent:'center',
         flexDirection:'row',
     },
 

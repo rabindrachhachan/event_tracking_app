@@ -63,7 +63,7 @@ export class DrawerScreen extends Component {
             >
                 <View key={index.toString()} style={[styles.eventItem,{width: '90%'}]}>
                     <View style={styles.eventTitleContainer}>
-                        <Text style={styles.text1} numberOfLines={4}>
+                        <Text style={[styles.text1,{paddingHorizontal:5}]} numberOfLines={4}>
                             {desc}
                         </Text>
                     </View>
@@ -96,9 +96,12 @@ export class DrawerScreen extends Component {
     }
 
     renderHeader =()=>{
-        <View style={styles.header}>
-            <Text style={styles.text1}>{'Track List'} </Text>
-        </View>
+        return(
+            <View style={styles.header}>
+                <Text style={styles.text1}>{'Track List'} </Text>
+            </View>
+        )
+        
     }
 
     render() { 

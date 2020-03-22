@@ -11,7 +11,7 @@ class LaunchScreen extends Component {
     _bootstrapAsync = async () => {
         // This will switch to the App screen or Auth screen and this loading
         // screen will be unmounted and thrown away.
-        this.props.navigation.navigate(this.props.isLoggedIn ? 'app' : 'auth');
+        this.props.navigation.navigate('auth');
     };
 
     render() {

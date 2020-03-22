@@ -62,9 +62,7 @@ const styles = StyleSheet.create({
         right:0,
         position:'absolute',
         backgroundColor: '#48BBEC',
-        borderRadius: 8,
-        borderTopLeftRadius:0,
-        borderTopRightRadius:0,
+        
     },
     footerItemOk: {
         width: '45%',
@@ -90,22 +88,23 @@ const styles = StyleSheet.create({
     modalContainerBackground: {
         height: '100%',
         width: '100%',
-        backgroundColor: 'rgba(0,0,0,0.5)',
+        backgroundColor: 'rgba(0,0,0,0.1)',
     },
 
     modalContainer: {
         justifyContent: 'center',
         alignItems: 'center',
-        zIndex: 1000,
-        elevation: 10,
-        borderRadius: 8,
+        zIndex: 100,
+        elevation:4,
         borderColor: '#bbb',
         borderWidth: StyleSheet.hairlineWidth,
         width: '100%',
-        height: 110,
-        top: '25%',
-        bottom: '25%',
+        height:150,
         backgroundColor: 'white',
+        position:'absolute',
+        top:0,
+        left:0,
+        right:0
     },
 });
 
