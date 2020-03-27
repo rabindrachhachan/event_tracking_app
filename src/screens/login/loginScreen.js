@@ -12,7 +12,7 @@ import {
     setUserName
 } from "../../actions/login"
 
-class EventDetailScreen extends Component {
+class LoginScreen extends Component {
     static navigationOptions = {
         title: 'launch',
         header: null,
@@ -120,4 +120,4 @@ const mapDispatchToProps ={
     setUserName
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(EventDetailScreen);
+export default connect(mapStateToProps,mapDispatchToProps)(LoginScreen);
