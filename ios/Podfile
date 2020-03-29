@@ -28,7 +28,6 @@ target 'SampleApp' do
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
 
-  pod 'RNSnackbar', :path => '../node_modules/react-native-snackbar'
 
   target 'SampleAppTests' do
     inherit! :search_paths

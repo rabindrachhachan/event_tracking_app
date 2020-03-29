@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.8,
         shadowRadius: 1,
         marginEnd: 2,
+        alignSelf:'center'
     },
 
     eventImageContainer: {
@@ -33,6 +34,9 @@ const styles = StyleSheet.create({
     eventImage: {
         height: 120,
         width: undefined,
+        borderTopLeftRadius: 5,
+        borderTopRightRadius: 5,
+        backgroundColor: 'white',
     },
     eventTitleContainer: {
         height: '40%',
@@ -40,7 +44,9 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         borderBottomWidth: 4,
         borderBottomColor: 'white',
-        paddingTop:10
+        paddingTop:10,
+       
+        
     },
     text1: {
         fontSize: 16,

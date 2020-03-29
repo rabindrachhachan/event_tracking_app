@@ -23,7 +23,7 @@ class EventDetailScreen extends Component {
     }
 
     componentDidMount(){
-        this.props.reset()
+        this.props.reset();
     }
 
     componentDidUpdate(prevProps,prevState){
@@ -82,12 +82,12 @@ class EventDetailScreen extends Component {
         
     };
 
-    renderAddButton = (item ) => {
-        const selected = this.state.added || item['tracking'] ;
+    renderAddButton = (item ,tracking) => {
+        const selected = this.state.added || tracking;
         return (
             <View style={[styles.toggleWrapper,{backgroundColor: selected ? '#7D98B3': '#48BBEC'}]}>
                 <TouchableOpacity
-                    disabled ={item['tracking'] || this.state.added}
+                    disabled ={selected}
                     onPress ={()=> this.onAddPressed(item)} 
                     style={styles.toggleTextWrapper}>
                     <Text style={[styles.focusText,{color:'white'}]}>
@@ -100,12 +100,12 @@ class EventDetailScreen extends Component {
 
 
     render() {
-        const {item } = this.props.navigation.state.params;
+        const {item,tracking } = this.props.navigation.state.params;
         return (
             <View style={styles.container}>
                 {this.renderEventItem(item)}
                 <View style={styles.addButton}>
-                    {this.renderAddButton(item)}
+                    {this.renderAddButton(item,tracking)}
                 </View>
             </View>
         );

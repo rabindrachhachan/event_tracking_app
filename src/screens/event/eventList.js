@@ -19,6 +19,9 @@ import {
     setListOrder
 } from "../../actions/event"
 
+import ListItem from "../../components/listItem";
+import GridItem from "../../components/gridItem";
+
 
 class EventListScreen extends Component {
     constructor(props){
@@ -130,8 +133,8 @@ class EventListScreen extends Component {
     };
 
 
-    onItemPressed =(item)=>{
-        this.props.navigation.navigate('detail',{item:item});
+    onItemPressed =(item,tracking)=>{
+        this.props.navigation.navigate('detail',{item:item, tracking:tracking});
     }
 
     renderEventItem = ({ item, index }) => {
@@ -146,54 +149,26 @@ class EventListScreen extends Component {
                 tracking = true;
             }
         }
-        
+
         if(mode ==='listview'){
             return (
-                <TouchableOpacity
-                    onPress={() => this.onItemPressed(item)}
-                >
-                    <View key={index.toString()} style={[styles.eventItem,{
-                        width:  DEVICE_WIDTH * 0.99,
-                    }]}>
-                        <View style={styles.eventImageContainer}>
-                            <Image
-                                style={styles.eventImage}
-                                source={{uri: item['thumbNail']}}
-                                resizeMode='cover'
-                            />
-                        </View>
-                        <View style={[styles.eventTitleContainer,
-                            { borderBottomColor : tracking? '#2AC940': 'white'}]}>
-                            <Text style={styles.text1} numberOfLines={4}>
-                                {desc}
-                            </Text>
-                        </View>
-                    </View>
-                </TouchableOpacity>
+                <ListItem 
+                    desc={desc} 
+                    tracking={tracking} 
+                    thumbNail={item['thumbNail']} 
+                    onItemPressed={this.onItemPressed}
+                    item={item} 
+                />
             );
         }else{
             return (
-                <TouchableOpacity
-                    onPress={() => this.onItemPressed(item)}
-                >
-                    <View key={index.toString()} style={[styles.eventItem,{
-                        width:  DEVICE_WIDTH * 0.48,
-                    }]}>
-                        <View style={styles.eventImageContainer}>
-                            <Image
-                                style={styles.eventImage}
-                                source={{uri: item['thumbNail']}}
-                                resizeMode='cover'
-                            />
-                        </View>
-                        <View style={[styles.eventTitleContainer,
-                            { borderBottomColor : typeof item['tracking'] !=='undefined' && item['tracking'] ? '#2AC940': 'white'}]}>
-                            <Text style={styles.text1} numberOfLines={4}>
-                                {desc}
-                            </Text>
-                        </View>
-                    </View>
-                </TouchableOpacity>
+                <GridItem
+                    desc={desc} 
+                    tracking={tracking} 
+                    thumbNail={item['thumbNail']} 
+                    onItemPressed={this.onItemPressed} 
+                    item={item} 
+                />
             );
         }
         
@@ -229,9 +204,6 @@ class EventListScreen extends Component {
                     
                 );
             }
-
-
-            
         }
         return null;
     };

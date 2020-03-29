@@ -30,38 +30,7 @@ const styles = StyleSheet.create({
         alignItems:'center',
         flexDirection:'row',
     },
-    eventItem: {
-        marginTop: 2,
-        width: DEVICE_WIDTH * 0.48,
-        height:200,
-        borderRadius: 5,
-        borderWidth: 1,
-        borderColor: 'rgb(169,171,173)',
-        backgroundColor:'white',
-        shadowOffset: { width: 1, height: 1 },
-        shadowColor: 'black',
-        shadowOpacity: 0.8,
-        shadowRadius: 1,
-        marginEnd: 2,
-    },
-
-    eventImageContainer: {
-        height: '60%',
-        borderRadius: 5,
-        backgroundColor: 'white',
-    },
-    eventImage: {
-        height: 120,
-        width: undefined,
-    },
-    eventTitleContainer: {
-        height: '40%',
-        justifyContent: 'center',
-        alignItems: 'center',
-        borderBottomWidth: 4,
-        borderBottomColor: 'white',
-        paddingTop:10
-    },
+    
     text1: {
         fontSize: 16,
         lineHeight: 18,
